@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population Clicker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="sound-controls">
+            <button id="toggleClickSound" class="sound-toggle">Son</button>
+            <button id="toggleBackgroundMusic" class="sound-toggle">Musique</button>
+        </div>
+        <div class="main-content">
+            <img id="clicker" src="clique.png" alt="Clique ici pour augmenter la population">
+            <div id="population">
+                <span id="populationLabel">Population</span>
+                <span id="count">0</span>
+                <span id="populationUnit"></span>
+            </div>
+            <div id="populationPerSecond">
+                <span id="perSecondLabel">Par seconde</span>
+                <span id="perSecond">0</span>
+                <span id="perSecondUnit"></span>
+            </div>
+            <div id="trophies">Trophées: <span id="trophyCount">0</span></div>
+        </div>
+        <div class="improvements">
+            <div class="upgrades-list">
+                <div class="upgrade">
+                    <button id="doubleClicks" class="upgrade-button">Activer x2</button>
+                    <div class="upgrade-cost" id="doubleClicksCost">Coût: ???</div>
+                </div>
+                <div class="upgrade">
+                    <button id="maternity" class="upgrade-button">Maternité</button>
+                    <div class="upgrade-cost" id="maternityCost">Coût: ???</div>
+                </div>
+                <div class="upgrade">
+                    <button id="populationExplosion" class="upgrade-button">Explosion de Population</button>
+                    <div class="upgrade-cost" id="populationExplosionCost">Coût: ???</div>
+                </div>
+                <div class="upgrade">
+                    <button id="immigration" class="upgrade-button">Immigration</button>
+                    <div class="upgrade-cost" id="immigrationCost">Coût: ???</div>
+                </div>
+                <div class="upgrade">
+                    <button id="education" class="upgrade-button">Éducation</button>
+                    <div class="upgrade-cost" id="educationCost">Coût: ???</div>
+                </div>
+                <div class="upgrade">
+                    <button id="tourism" class="upgrade-button">Tourisme</button>
+                    <div class="upgrade-cost" id="tourismCost">Coût: ???</div>
+                </div>
+                <div class="upgrade">
+                    <button id="buyBoost" class="upgrade-button">Acheter Boost</button>
+                    <div class="upgrade-cost" id="buyBoostCost">Coût: ???</div>
+                </div>
+                <div class="upgrade">
+                    <button id="grandma" class="upgrade-button">Grand-mère</button>
+                    <div class="upgrade-cost" id="grandmaCost">Coût: ???</div>
+                </div>
+                <div class="upgrade">
+                    <button id="farm" class="upgrade-button">Ferme</button>
+                    <div class="upgrade-cost" id="farmCost">Coût: ???</div>
+                </div>
+                <div class="upgrade">
+                    <button id="factory" class="upgrade-button">Usine</button>
+                    <div class="upgrade-cost" id="factoryCost">Coût: ???</div>
+                </div>
+                <div class="upgrade">
+                    <button id="bank" class="upgrade-button">Banque</button>
+                    <div class="upgrade-cost" id="bankCost">Coût: ???</div>
+                </div>
+                <div class="upgrade">
+                    <button id="portal" class="upgrade-button">Portail Dimensionnel</button>
+                    <div class="upgrade-cost" id="portalCost">Coût: ???</div>
+                </div>
+                <div class="upgrade">
+                    <button id="timeMachine" class="upgrade-button">Machine à Voyager dans le Temps</button>
+                    <div class="upgrade-cost" id="timeMachineCost">Coût: ???</div>
+                </div>
+                <div class="upgrade">
+                    <button id="antimatterCondenser" class="upgrade-button">Condenseur d'Antimatière</button>
+                    <div class="upgrade-cost" id="antimatterCondenserCost">Coût: ???</div>
+                </div>
+                <div class="upgrade">
+                    <button id="cellCloning" class="upgrade-button">Clonage Cellulaire</button>
+                    <div class="upgrade-cost" id="cellCloningCost">Coût: ???</div>
+                </div>
+                <div class="upgrade">
+                    <button id="neuralNetwork" class="upgrade-button">Réseau Neuronal</button>
+                    <div class="upgrade-cost" id="neuralNetworkCost">Coût: ???</div>
+                </div>
+            </div>
+            <div id="events" class="event-log"></div>
+            <div id="achievements" class="achievements-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

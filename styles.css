@@ -1,0 +1,200 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow: hidden;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 1400px;
+    width: 95%;
+    max-height: 95vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.sound-controls {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.sound-toggle {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sound-toggle.active {
+    background-color: #4CAF50; /* Green for active */
+}
+
+.sound-toggle.inactive {
+    background-color: #F44336; /* Red for inactive */
+}
+
+.sound-toggle:hover {
+    opacity: 0.8;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#clicker {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#clicker:hover {
+    transform: scale(1.05);
+}
+
+#population, #populationPerSecond {
+    font-size: 1.5em;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+#trophies {
+    font-size: 1.2em;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.improvements {
+    overflow-y: auto;
+    max-height: 90vh;
+    scroll-behavior: smooth;
+}
+
+.upgrades-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.upgrade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upgrade-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    width: 100%;
+}
+
+.upgrade-button.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.upgrade-button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.upgrade-button.disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.upgrade-cost {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Unique colors for each upgrade button */
+#doubleClicks.show { background-color: #ff6347; }
+#maternity.show { background-color: #ff1493; }
+#populationExplosion.show { background-color: #ff4500; }
+#immigration.show { background-color: #1e90ff; }
+#education.show { background-color: #4169e1; }
+#tourism.show { background-color: #3cb371; }
+#buyBoost.show { background-color: #ffd700; }
+#grandma.show { background-color: #a1887f; }
+#farm.show { background-color: #7c997f; }
+#factory.show { background-color: #555555; }
+#bank.show { background-color: #005a9e; }
+#portal.show { background-color: #551a8b; }
+#timeMachine.show { background-color: #d2691e; }
+#antimatterCondenser.show { background-color: #8b0000; }
+#cellCloning.show { background-color: #4b0082; }
+#neuralNetwork.show { background-color: #000080; }
+
+.event-log, .achievements-list {
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    max-height: 100px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.event-log div {
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 14px;
+}
+
+.achievement {
+    background: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
